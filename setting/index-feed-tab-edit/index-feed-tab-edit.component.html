@@ -1,0 +1,41 @@
+<div class="back-bg" (click)="_onBackground()"></div>
+<div class="msg">
+  <div class="msg-content">
+    <div class="weui-cells">
+      <a class="weui-cell weui-cell_access has-border" href="javascript:;" (click)="moduleSelect()">
+        <div class="weui-cell__bd">
+          <p>模块</p>
+        </div>
+        <div class="weui-cell__ft">{{data.mtitle}}({{data.code }})</div>
+      </a>
+      <suyun-modules-select *ngIf="showModuleSelect" (onSelect)="onSelect($event)"></suyun-modules-select>
+    </div>
+
+
+    <div class="weui-cells m10">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">显示标题</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" [(ngModel)]="data.title" type="text" placeholder="请输入标题">
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells m10">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">显示顺序</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" [(ngModel)]="data.display" type="text" placeholder="请输入显示顺序(默认为当前时间)">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary" (click)="save()">保存</a>
+      <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default" (click)="default()">默认</a>
+      <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn fr" (click)="delete()">删除</a>
+    </div>
+  </div>
+</div>
+
+

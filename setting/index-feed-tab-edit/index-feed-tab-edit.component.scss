@@ -1,0 +1,40 @@
+.weui-cells{
+  margin: 0px;
+}
+
+.m10{
+  margin-top: 10px !important;
+}
+
+.footer{
+  margin: 10px;
+}
+
+.has-border{
+  border-bottom: 1px solid #ccc;
+}
+
+.fr{
+  float: right;
+}
+
+.msg{
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 10%;
+  height: auto;
+  background: #ececec;
+  padding: 10px;
+  border-radius: 10px;
+  z-index:9999999;
+}
+.back-bg{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:99999;
+  background-color:rgba(0, 0, 0, 0.46);
+}

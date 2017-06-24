@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="weui-cells m0">
+    <a class="weui-cell weui-cell_access" href="javascript:;" (click)="edit(item,i)" *ngFor="let item of items;index as i;">
+      <div class="weui-cell__bd">
+        <p>{{item.title}}</p>
+      </div>
+      <div class="weui-cell__ft">{{item.mtitle}}-{{item.code}}</div>
+    </a>
+  </div>
+
+  <div class="weui-cells m10">
+    <a class="weui-cell weui-cell_access" href="javascript:;" (click)="add()">
+      <div class="weui-cell__bd">
+        <p>添加</p>
+      </div>
+      <div class="weui-cell__ft"></div>
+    </a>
+  </div>
+</div>
+
+
+<div class="edit" *ngIf="show.edit">
+  <suyun-index-feed-tab-edit [index]="index" (onDefault)="onDefault($event)" (onDelete)="onDelete()" (onBackground)="show.edit = !show.edit" [data]="data" (onSave)="onSave()"></suyun-index-feed-tab-edit>
+</div>
